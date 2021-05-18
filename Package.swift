@@ -24,10 +24,7 @@ let package = Package(
                 "generate_spm_include.sh",
                 "GPBProtocolBuffers.m",
             ],
-            cSettings: [.unsafeFlags(["-fno-objc-arc"])],
-            cxxSettings: [
-                .define("GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS", to: "1"),
-            ]
+            cSettings: [.unsafeFlags(["-fno-objc-arc"])]
         ),
     ]
 )
