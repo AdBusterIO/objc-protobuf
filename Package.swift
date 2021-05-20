@@ -8,10 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "Protobuf",
-            targets: [
-                "Protobuf",
-                "Protobuf+JSONFormat",
-            ]
+            targets: ["Protobuf"]
         ),
     ],
     targets: [
@@ -28,12 +25,6 @@ let package = Package(
                 "GPBProtocolBuffers.m",
             ],
             cSettings: [.unsafeFlags(["-fno-objc-arc"])]
-        ),
-        .target(
-            name: "Protobuf+JSONFormat",
-            dependencies: ["Protobuf"],
-            path: "objectivec+jsonformat",
-            publicHeadersPath: ""
         ),
     ]
 )
